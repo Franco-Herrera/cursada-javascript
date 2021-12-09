@@ -86,7 +86,7 @@ function envioCorreo (NombreDeUsuario){
 let NombreDeUsuario = prompt ("dinos tu nombre")
 envioCorreo (NombreDeUsuario)
 
-
+*/
 
 
 function Paquete(remitente, destinatario, peso, altura,){
@@ -94,20 +94,29 @@ function Paquete(remitente, destinatario, peso, altura,){
     this.destinatario = destinatario;
     this.peso = peso;
     this.altura = altura;
-    this.corroborar = () => console.log(`hola ${this.remitente} estos datos son los correctos? destinatario ${this.destinatario} peso del paquete ${this.peso} altura ${this.altura} ?`)
+
+    
+
+
+    //this.corroborar = () => console.log(`hola ${this.remitente} estos datos son los correctos? destinatario ${this.destinatario} peso del paquete ${this.peso} altura ${this.altura} ?`)
+    //paquete1.corroborar() 
+    //paquete2.corroborar() 
 }
 
-const paquete1 = new Paquete ("franco herrera", "mateo fernandez", "12", "150 centimetros")
-const paquete2 = new Paquete ("alma gutierrez", "naara contreras", "4", "50 centimetros")
+
+const paquete1 = new Paquete ("franco herrera", "mateo fernandez", 12, "150 centimetros")
+const paquete2 = new Paquete ("alma gutierrez", "naara contreras", 4, "50 centimetros")
+const paquete3 = new Paquete ("mercedes canteros", "sergio cosentino", 20, "80 centimetros")
+const paquete4 = new Paquete ("paola herrera", "leandro degenaro", 15, "120 centimetros")
 
 
-paquete1.corroborar() 
-paquete2.corroborar() 
+let paquetes = [paquete1,paquete2,paquete3,paquete4]
+
+console.log(paquetes)
 
 
+let listaDePesos = paquetes.map(paqueteAPesar => paqueteAPesar.peso)
+console.log(listaDePesos)
+let listaDeMedidas = paquetes.map(paqueteAMedir => paqueteAMedir.altura)
+console.log(listaDeMedidas)
 
-*/
-
-let array = ["franco herrera", "mateo fernandez", 12, "150 centimetros"]
-
-alert(array[0])
